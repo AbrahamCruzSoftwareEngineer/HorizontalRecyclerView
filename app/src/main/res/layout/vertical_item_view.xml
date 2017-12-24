@@ -1,17 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2ff47"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:backgroundTint="@color/colorAccent"
+        android:scaleType="fitCenter"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"/>
     <TextView
-
-        android:textColor="#787878"
-        android:textSize="18sp"
-        android:padding="16dp"
-        android:id="@+id/txtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:text="This is Frame Layout!!!"
+        android:textSize="24px"
+        android:textColor="#cc0000"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="top"/>
+    <TextView
+        android:text="Android Development"
+        android:textSize="24px"
+        android:textColor="#00dd00"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center"/>
+</FrameLayout>
