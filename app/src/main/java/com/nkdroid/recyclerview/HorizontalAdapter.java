@@ -51,6 +51,8 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
     public void onBindViewHolder(final HorizontalAdapter.MyViewHolder holder, final int position) {
         final Animation scaleFromCenter = AnimationUtils.loadAnimation(context, R.anim.scale_anim);
         final Animation hideFromScreen = AnimationUtils.loadAnimation(context, R.anim.hide_anim);
+        final Animation leftToRight = AnimationUtils.loadAnimation(context, R.anim.left_to_right);
+        final Animation rightToLeft = AnimationUtils.loadAnimation(context, R.anim.right_to_left);
 
         holder.txtView.setText(horizontalList.get(position));
         holder.txtView.setOnClickListener(new View.OnClickListener() {
@@ -60,13 +62,13 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
                 if (!CAM_STATUS){
                     if(holder.camView.getVisibility()==View.GONE){
                         CAM_STATUS = true;
-                        holder.camView.startAnimation(scaleFromCenter);
+                        holder.camView.startAnimation(leftToRight);
                         holder.camView.setVisibility(View.VISIBLE);
                     }
                 } else {
                     if(holder.camView.getVisibility()==View.VISIBLE){
                         CAM_STATUS = false;
-                        holder.camView.startAnimation(hideFromScreen);
+                        holder.camView.startAnimation(rightToLeft);
                         holder.camView.setVisibility(View.GONE);
                     }
                 }
